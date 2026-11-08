@@ -5,7 +5,7 @@ import { SystemWindow, Gauge, Tag, Kpi, useCountUp, fmt, ymd, round1 } from './u
 const RANK_KO: Record<Snapshot['rank'], string> = { E: 'E급 헌터', D: 'D급 헌터', C: 'C급 헌터', B: 'B급 헌터', A: 'A급 헌터', S: 'S급 헌터' };
 export const titleOf = (s: Snapshot) => { const d = s.achievements.filter(a => a.done); return d.length ? d[d.length - 1].name : '각성자'; };
 
-// ───────── 상단 KPI 띄 ─────────
+// ───────── 상단 KPI 띠 ─────────
 export function KpiStrip({ s }: { s: Snapshot }) {
   const d = s.day;
   const avg30 = Math.round(s.history.reduce((a, h) => a + h.xp, 0) / 30);
@@ -55,7 +55,7 @@ export function StatusPanel({ s, index }: { s: Snapshot; index: number }) {
 // ───────── 1인칭 서술 ─────────
 export function narrate(s: Snapshot): string[] {
   const d = s.day; const out: string[] = [];
-  out.push(`나는 ${s.counters.daysLogged}일을 기록했고 ${fmt(s.totalXp)} XP를 쓸았다.`);
+  out.push(`나는 ${s.counters.daysLogged}일을 기록했고 ${fmt(s.totalXp)} XP를 쌓았다.`);
   if (d && d.isToday) {
     const m = d.metrics;
     if (m.steps !== undefined) out.push(`오늘 ${fmt(m.steps)}걸음을 걸었다${m.steps >= s.config.stepsBonusAt ? '. 1만 보를 넘겼다' : ''}.`);

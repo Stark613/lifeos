@@ -53,7 +53,7 @@ npm run build               # → ../Dashboard.html 생성 (React 는 CDN 로드
 node scripts/make-preview.mjs ../health_log.csv 2026-11-08 preview.html   # 실제 데이터 미리보기 (예시 Tasks 포함)
 ```
 빌드 후 `Dashboard.html` 내용을 Apps Script 의 Dashboard.html 에 덮어쓰면 끝.
-현재 레이아웃은 데스크톱(1280px+) 기준. 상단 KPI 띄 · 탭 4개(Dashboard / Quest / History / Rules) · 3열 그리드 · 하단 상태바. 모바일 레이아웃은 추후.
+현재 레이아웃은 데스크톱(1280px+) 기준. 상단 KPI 띠 · 탭 4개(Dashboard / Quest / History / Rules) · 3열 그리드 · 하단 상태바. 모바일 레이아웃은 추후.
 
 ## 로컬 테스트
 ```bash
