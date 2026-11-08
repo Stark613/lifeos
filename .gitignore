@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+# 개인 건강 데이터는 커밋하지 않음
+samples/
+*.csv
+app/package-lock.json
