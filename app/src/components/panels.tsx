@@ -55,7 +55,7 @@ export function StatusPanel({ s, index }: { s: Snapshot; index: number }) {
 // ───────── 1인칭 서술 ─────────
 export function narrate(s: Snapshot): string[] {
   const d = s.day; const out: string[] = [];
-  out.push(`나는 ${s.counters.daysLogged}일을 기록했고 ${fmt(s.totalXp)} XP를 앓았다.`);
+  out.push(`나는 ${s.counters.daysLogged}일을 기록했고 ${fmt(s.totalXp)} XP를 쓸았다.`);
   if (d && d.isToday) {
     const m = d.metrics;
     if (m.steps !== undefined) out.push(`오늘 ${fmt(m.steps)}걸음을 걸었다${m.steps >= s.config.stepsBonusAt ? '. 1만 보를 넘겼다' : ''}.`);
